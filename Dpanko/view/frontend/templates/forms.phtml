@@ -1,16 +1,17 @@
 <?php
 /**
  * @var Amasty\Dpanko\Block\Index $block
- * @var Amasty\Dpanko\Block\Index $block1
  */
-//$css_class=$block1->getData('css_class');
+
 ?>
 
-<form name="form" method="POST" action="#">
+<div style="<?= $block->getClasses() ?>">
+    <form name="form" method="POST" action="#">
 
-    <p><input type="text" name="sku" placeholder="Text"></p>
-    <p><input type="number" name="qty" placeholder="Number"></p>
-    <p><?= $block->getChildHtml('Amasty_Dpanko_additional') ?></p>
-    <p><input type="submit" value="Отправить""></p>
+        <p><input type="text" name="sku" placeholder="Text"></p>
+        <p><input type="number" name="qty" placeholder="Number"></p>
+        <p><?= $block->getChildHtml('Amasty_Dpanko_additional') ?></p>
+        <p><input type="submit" value="Отправить""></p>
+</div>
 
-</form>exit
+</form>
