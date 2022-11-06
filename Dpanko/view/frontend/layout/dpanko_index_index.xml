@@ -9,24 +9,14 @@
     <body>
         <referenceContainer name="content">
             <container name="Amasty_Dpanko.main" htmlTag="div" htmlClass="Dpanko-container">
-                <!--                <div class="container-add-form">-->
+
                 <block name="Amasty_Dpanko.hello" template="Amasty_Dpanko::hello.phtml"/>
                 <block name="Amasty_Dpanko.form" template="Amasty_Dpanko::forms.phtml">
                     <block name="Amasty_Dpanko.additional" as="Amasty_Dpanko_additional"
                            template="Amasty_Dpanko::text.phtml"/>
                 </block>
-                <!--
-                                <block name="style.css">
-                                    <arguments>
-                                        <argument name="css_class" xsi:type="url" path="Amasty\Dpanko">
-                                            <param name="border-width">10px</param>
-                                            <param name="border-style:">solid</param>
-                                            <param name="border-color">black</param>
-                                        </argument>
-                                    </arguments>
-                                </block>
-                -->
-                                <!--                </div>-->
+
+
             </container>
 
         </referenceContainer>
