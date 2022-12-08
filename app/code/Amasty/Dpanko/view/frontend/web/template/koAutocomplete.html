@@ -1,10 +1,14 @@
 <p><input type="text"
           name="dpanko-search-input"
           id="dpanko-search-input "
-          data-bind="textInput: searchText"/>
+          data-bind="textInput: searchText"
+          data-validate='{"required":true}'/>
 </p>
 
-<p>
-<p><input type="submit" value="Отправить"
-          formaction="form.php" formmethod="post"></p>
-</p>
+
+<div class="autocomplete-list">
+    <ul data-bind="foreach: searchResult">
+        <li data-bind="text: $data.sku"></li>
+        <li data-bind="text: $data.name"></li>
+    </ul>
+</div>
