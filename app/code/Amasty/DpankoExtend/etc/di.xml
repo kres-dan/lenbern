@@ -7,6 +7,9 @@
     <type name="Amasty\Dpanko\Block\Index">
         <plugin name="change-action" type="Amasty\DpankoExtend\Plugin\Block\Index\ChangeAction"/>
     </type>
+    <type name="Amasty\Dpanko\Block\Index">
+        <plugin name="change-magento" type="Amasty\DpankoExtend\Plugin\Block\Index\ChangeMagento"/>
+    </type>
     <preference for="\Amasty\Dpanko\Controller\Index"
                 type="Amasty\DpankoExtend\Dpanko\Block\Index"/>
 </config>
