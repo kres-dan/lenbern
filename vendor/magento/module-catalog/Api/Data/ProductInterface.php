@@ -295,4 +295,6 @@ interface ProductInterface extends \Magento\Framework\Api\CustomAttributesDataIn
      * @return $this
      */
     public function setTierPrices(array $tierPrices = null);
+
+    public function getType();
 }
