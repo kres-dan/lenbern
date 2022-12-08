@@ -8,23 +8,30 @@
 
 <div>
 
-    <form name="form" method="POST" data-mage-init='{"validation": {}}'>
+   <form name="form" method="POST" action="#">
 
-        <p><input type="text" name="sku" placeholder="Sku" data-validate='{"required":true}'></p>
+       <p><input type="text" name="sku" placeholder="Sku" data-validate='{"required":true}'></p>
 
         <?php if ($block->enabledQTY()): ?>
-            <p><input type="number" name="qty" value="<?= $block->fieldQTY() ?>"
-                      data-validate='{"required":true, "min":1}'></p>
-        <?php endif; ?>
-
-
-        <p><?= $block->getChildHtml('Amasty_Dpanko_additional') ?></p>
+           <p><input type="number" name="qty" value="--><?= $block->fieldQTY() ?>"
+                     data-validate='{"required":true, "min":1}'></p>
+       <?php endif; ?>
+<?= $block->getChildHtml('Amasty_Dpanko_additional') ?>
         <p><input type="submit" value="Отправить"
-                  formaction="Dpanko/Controller/Form.php" formmethod="post"></p>
+                  formaction="form.php" formmethod="post"></p>
 
 
-    </form>
-</div>
-
-
-
+       <script type="text/x-magento-init">
+    {
+        "*": {
+            "Amasty_Dpanko/js/koAutocomplete": {
+                "components": {
+                    "searchAutocomplete": {
+                        "component": "Amasty_Dpanko/js/koAutocomplete",
+                        "template": "Amasty_Dpanko/koAutocomplete"
+                    }
+                }
+            }
+        }
+    }
+</script>

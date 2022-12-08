@@ -38,10 +38,17 @@ class Index implements ActionInterface
     private CheckoutSession $CheckoutSession;
 
 
+
+
     /**
      * @var ProductRepositoryInterface
      */
     private ProductRepositoryInterface $ProductRepository;
+    /**
+     * @var ProductCollectionFactory
+     */
+    private $ProductCollectionFactory;
+
 
 
     public function __construct(
@@ -49,6 +56,7 @@ class Index implements ActionInterface
         ScopeConfigInterface       $scopeConfig,
         CheckoutSession            $CheckoutSession,
         ProductRepositoryInterface $ProductRepository,
+        ProductCollectionFactory   $ProductCollectionFactory,
 
 
     )
@@ -57,6 +65,7 @@ class Index implements ActionInterface
         $this->ScopeConfig = $scopeConfig;
         $this->CheckoutSession = $CheckoutSession;
         $this->ProductRepository = $ProductRepository;
+        $this->ProductCollectionFactory = $ProductCollectionFactory;
 
 
     }

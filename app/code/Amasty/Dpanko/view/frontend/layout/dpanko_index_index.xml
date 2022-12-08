@@ -14,8 +14,7 @@
 
                 <block class="Amasty\Dpanko\Block\Index" name="Amasty_Dpanko.hello"
                        template="Amasty_Dpanko::hello.phtml"/>
-                <block class="Amasty\Dpanko\Block\Index" name="Amasty_Dpanko.form"
-                       template="Amasty_Dpanko::forms.phtml">
+                <block name="Amasty_Dpanko.form" template="Amasty_Dpanko::knock.phtml">
                     <block name="Amasty_Dpanko.additional" as="Amasty_Dpanko_additional"
                            template="Amasty_Dpanko::text.phtml"/>
                 </block>

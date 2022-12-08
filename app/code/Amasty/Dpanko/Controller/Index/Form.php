@@ -10,17 +10,12 @@ use  Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Magento\Framework\Controller\ResultFactory;
+use Psr\Log\LoggerInterface;
 use Magento\Framework\Message\ManagerInterface;
 
 
 class Form implements ActionInterface
 {
-    /**
-     * @var ResultFactory
-     */
-    private ResultFactory $resultFactory;
-
     /**
      * @var CheckoutSession
      */
@@ -30,40 +25,40 @@ class Form implements ActionInterface
      */
     public ProductRepositoryInterface $ProductRepository;
     public RequestInterface $request;
-
-
+    /**
+     * @var LoggerInterface
+     */
+    public LoggerInterface $logger;
+    private const FORM_ACTION = ' ';
 
     public function __construct(
         RequestInterface           $request,
         CheckoutSession            $CheckoutSession,
         ProductRepositoryInterface $ProductRepository,
-        ResultFactory              $resultFactory,
+        LoggerInterface            $logger,
         ManagerInterface           $messageManager,
 
 
     )
     {
-        $this->resultFactory = $resultFactory;
         $this->request = $request;
         $this->CheckoutSession = $CheckoutSession;
         $this->ProductRepository = $ProductRepository;
+        $this->logger = $logger;
         $this->messageManager = $messageManager;
 
-
     }
-
 
     /**
      * @throws NoSuchEntityException
      * @throws LocalizedException
-
      */
 
 
-    /**
-     * @param
-     */
-    public \Magento\Catalog\Api\Data\ProductInterface $product;
+    public function getFormAction()
+    {
+        return (self::FORM_ACTION);
+    }
 
     public function execute()
     {
@@ -96,6 +91,4 @@ class Form implements ActionInterface
 
 
     }
-
-
 }
