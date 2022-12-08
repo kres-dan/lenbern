@@ -158,7 +158,7 @@ abstract class AbstractBlock extends \Magento\Framework\DataObject implements Bl
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
-    protected $_scopeConfig;
+    public $_scopeConfig;
 
     /**
      * @var \Magento\Framework\App\CacheInterface
