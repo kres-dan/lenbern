@@ -1,19 +1,16 @@
 define(function () {
-
     'use strict';
-
-
     var mixin = {
-        setMinLength: function(){
-            this.minLength = 5;
-        },
+
+
+        handleAutocomplete: function (searchValue) {
+            this._super();
+            let len = 5;
+        }
     };
-
-
     return function (target) {
 
         return target.extend(mixin);
-
     };
 
 });

@@ -49,6 +49,20 @@ class Form implements ActionInterface
 
     }
 
+    public function getProductType($product)
+    {
+        $sku = $this->request->getParam('sku');
+
+        $productType = null;
+        try {
+            $productType = $this->ProductRepository->get($sku)->getType();
+        } catch (\Exception $exception) {
+            $this->logger->error($exception->getMessage());
+        }
+
+        return $productType;
+    }
+
     /**
      * @throws NoSuchEntityException
      * @throws LocalizedException

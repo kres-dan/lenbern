@@ -28,14 +28,13 @@ define(['uiComponent', 'jquery'], function (Component, $) {
 
                     dataType: "json",
                     data: {sku: searchValue},
-                    success: function (result){
+                    success: function (result) {
 
                         this.searchResult(result);
                     }.bind(this)
 
                 })
-            }
-            else{
+            } else {
                 this.searchResult([]);
 
 
