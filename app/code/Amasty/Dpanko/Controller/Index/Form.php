@@ -121,9 +121,9 @@ class Form implements ActionInterface
                 }
                 if ($sumQty > $blacklistQty) {
                     $this->addProductToCart($quote, $product, $blacklistQty,
-                        'Товар был добавлен в количестве: ' . $blacklistQty );
+                        'Товар был добавлен в количестве: ' . $blacklistQty);
                 } elseif ($sumQty <= 0) {
-                    $this->messageManager->addSuccessMessage(__('Товар не был добавлен'));
+                    $this->messageManager->addSuccessMessage(__('Товар не добавлен'));
                     return;
                 } else {
                     $this->addProductToCart($quote, $product, $sumQty,
