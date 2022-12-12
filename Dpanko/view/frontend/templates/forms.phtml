@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var Amasty\Dpanko\Block\Index $block
+ */
+?>
+
+<div>
+    <form name="form">
+        <p><input type="text" name="sku" placeholder="Sku" data-validate='{"required":true}'></p>
+
+        <?php if ($block->getEnabledQty()): ?>
+            <p><input type="number" name="qty" value="<?= $block->getFieldQty() ?>"
+                      data-validate='{"required":true, "min":1}'></p>
+        <?php endif; ?>
+
+        <p><?= $block->getChildHtml('Amasty_Dpanko_additional') ?></p>
+        <p><input type="submit" value="Отправить" formaction="#" formmethod="post"></p>
+    </form>
+</div>
