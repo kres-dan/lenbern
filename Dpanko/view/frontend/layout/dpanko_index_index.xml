@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_Dpanko::css/style4.css"/>
+    </head>
+
+    <body>
+
+        <referenceContainer name="content">
+            <container name="Amasty_Dpanko.main" htmlTag="div" htmlClass="Dpanko-container">
+
+                <block class="Amasty\Dpanko\Block\Index" name="Amasty_Dpanko.hello"
+                       template="Amasty_Dpanko::hello.phtml"/>
+                <block name="Amasty_Dpanko.form" template="Amasty_Dpanko::knock.phtml">
+                    <block name="Amasty_Dpanko.additional" as="Amasty_Dpanko_additional"
+                           template="Amasty_Dpanko::text.phtml"/>
+                </block>
+
+
+            </container>
+
+        </referenceContainer>
+
+    </body>
+
+
+</page>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="amasty_dpanko_get_data">
+        <observer name="to-update-cart" instance="Amasty\DpankoExtend\Observer\UpdateCart"/>
+    </event>
+</config>
