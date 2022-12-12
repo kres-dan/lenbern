@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Dpanko" translate="label" sortOrder="200">
+            <label>Amasty Dpanko</label>
+        </tab>
+        <section id="dpanko" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Amasty Dpanko</label>
+            <tab>Dpanko</tab>
+            <resource>Amasty_Dpanko::config</resource>
+            <group id="general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enabled" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is module enables</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="welcome_text" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Welcome Text</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="enabled_qty" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Поле для qty</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="field_qty" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>qty</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled_qty">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
