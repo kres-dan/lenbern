@@ -1,0 +1,17 @@
+<div data-bind="scope: 'dpankoautocomplete'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+   {
+       "*": {
+           "Magento_Ui/js/core/app": {
+               "components": {
+                   "dpankoautocomplete": {  // scope
+                       "component": "Amasty_Dpanko/js/koAutocomplete",
+                       "template" : "Amasty_Dpanko/koAutocomplete"
+                   }
+               }
+           }
+       }
+   }
+</script>
