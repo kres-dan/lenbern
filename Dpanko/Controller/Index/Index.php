@@ -7,7 +7,7 @@ namespace Amasty\Dpanko\Controller\Index;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use  Magento\Checkout\Model\Session as CheckoutSession;
+use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Catalog\Api\Data\ProductInterface;

@@ -7,7 +7,7 @@ use Exception;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\RequestInterface;
-use  Magento\Checkout\Model\Session as CheckoutSession;
+use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
